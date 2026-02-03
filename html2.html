@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locação Corporativa de Equipamentos | Ágil e Sem Burocracia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-800">LOCA<span class="text-orange-500">CORP</span></div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#solucoes" class="hover:text-blue-600 font-medium">Soluções</a>
+                <a href="#como-funciona" class="hover:text-blue-600 font-medium">Como Funciona</a>
+            </div>
+            <a href="#cotacao" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium transition">
+                Fale Conosco
+            </a>
+        </div>
+    </header>
+
+    <section class="bg-white py-12 md:py-20">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            
+            <div class="md:w-1/2">
+                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Atendimento B2B e Eventos</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-4 mb-6 leading-tight">
+                    Locação de Equipamentos para Eventos <span class="text-blue-600">sem Burocracia</span>.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Tudo o que você precisa em um só lugar: Climatização, Informática e Audiovisual. Entrega rápida e instalação inclusa.
+                </p>
+                
+                <div class="flex gap-4">
+                    <div class="flex items-center gap-2 text-sm font-medium text-gray-600">
+                        <i class="fas fa-check-circle text-green-500"></i> Orçamento em 30min
+                    </div>
+                    <div class="flex items-center gap-2 text-sm font-medium text-gray-600">
+                        <i class="fas fa-check-circle text-green-500"></i> Nota Fiscal
+                    </div>
+                </div>
+            </div>
+
+            <div id="cotacao" class="md:w-1/2 w-full">
+                <div class="bg-white border border-gray-200 shadow-2xl rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Solicitar Cotação Rápida</h3>
+                    <form action="#" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Seu Nome</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none" placeholder="Nome completo">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Empresa</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none" placeholder="Nome da empresa">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Data Evento</label>
+                                <input type="date" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 outline-none" placeholder="(00) 00000-0000">
+                            </div>
+                        </div>
+                        <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 rounded-lg text-lg transition shadow-lg hover:shadow-orange-500/30">
+                            RECEBER ORÇAMENTO
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucoes" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nosso Catálogo</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600">
+                    <div class="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4 text-xl">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Climatizadores</h3>
+                    <p class="text-gray-600">Evaporativos industriais. Mantenha a temperatura agradável em tendas e galpões sem custo de ar-central.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600">
+                    <div class="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4 text-xl">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Notebooks</h3>
+                    <p class="text-gray-600">Workstations e notebooks prontos para uso. Ideais para credenciamento, produção e apresentações.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600">
+                    <div class="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-4 text-xl">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Painéis de LED</h3>
+                    <p class="text-gray-600">Indoor e Outdoor. Tamanhos personalizáveis para criar fundos de palco dinâmicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Processo Simplificado</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center relative">
+                <div class="hidden md:block absolute top-12 left-0 w-full h-1 bg-gray-100 -z-10"></div>
+
+                <div>
+                    <div class="w-24 h-24 bg-blue-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4 border-4 border-white shadow">1</div>
+                    <h4 class="font-bold text-lg">Escolha</h4>
+                    <p class="text-sm text-gray-500">Selecione os equipamentos.</p>
+                </div>
+                <div>
+                    <div class="w-24 h-24 bg-blue-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4 border-4 border-white shadow">2</div>
+                    <h4 class="font-bold text-lg">Agende</h4>
+                    <p class="text-sm text-gray-500">Definimos entrega e montagem.</p>
+                </div>
+                <div>
+                    <div class="w-24 h-24 bg-blue-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4 border-4 border-white shadow">3</div>
+                    <h4 class="font-bold text-lg">Realize</h4>
+                    <p class="text-sm text-gray-500">Evento sem falhas técnicas.</p>
+                </div>
+                <div>
+                    <div class="w-24 h-24 bg-gray-800 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4 border-4 border-white shadow">4</div>
+                    <h4 class="font-bold text-lg">Retirada</h4>
+                    <p class="text-sm text-gray-500">Nós buscamos tudo ao final.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-blue-700 py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h2 class="text-3xl font-bold mb-6">Pronto para organizar um evento impecável?</h2>
+            <a href="https://wa.me/5500000000000" class="inline-block bg-white text-blue-800 hover:bg-gray-100 font-bold py-4 px-10 rounded-full transition shadow-lg text-lg">
+                <i class="fab fa-whatsapp mr-2"></i> Falar com Consultor
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0 font-bold text-xl">LOCACORP</div>
+            <div class="text-sm text-gray-400">&copy; 2024. Todos os direitos reservados.</div>
+        </div>
+    </footer>
+
+</body>
+</html>
