@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Link para o seu sitemap (Troque pelo seu domínio final quando configurar)
-Sitemap: https://landingpagejunior.vercel.app/sitemap.xml
+Sitemap: https://junioproduções.com.br/sitemap.xml
