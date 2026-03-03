@@ -13,10 +13,33 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#22c55e', // text-green-500
+                            glow: 'rgba(34, 197, 94, 0.4)',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        .neon-text { text-shadow: 0 0 10px rgba(74, 222, 128, 0.5); }
-        .neon-border { box-shadow: 0 0 15px rgba(177, 187, 180, 0.3); }
+        .neon-text { text-shadow: 0 0 20px rgba(74, 222, 128, 0.6); }
+        .glass-nav { background: rgba(17, 24, 39, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .hover-glow:hover { box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.5); border-color: #22c55e; }
     </style>
 </head>
 <body class="bg-gray-900 text-white font-sans antialiased">
@@ -110,82 +133,118 @@
         </div>
     </section>
 
-    <section id="produtos" class="py-20 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-16">Aluguel de Equipamentos de <span class="text-green-500">Alta Performance</span></h2>
-            <div class="grid md:grid-cols-3 gap-8">
+
+    <section id="produtos" class="py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Equipamentos de <span class="text-green-500">Alta Performance</span></h2>
+                <p class="text-gray-400 text-lg">Tudo o que você precisa para uma execução impecável.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="bg-gray-800 rounded-xl p-1 border border-gray-700">
-                    <img src="evento_06.jpeg" alt="Aluguel de Painel de LED P2 e P3 de Alta Resolução em Palmas" class="w-full h-56 object-cover rounded-t-lg">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Painéis de LED</h3>
-                        <p class="text-gray-400 text-sm mb-4">Painéis indoor e outdoor com brilho ajustável e montagem profissional inclusa.</p>
+                <!-- Card Produto -->
+                <div class="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:-translate-y-2 hover-glow transition-all duration-300 flex flex-col">
+                    <div class="relative bg-gray-900 h-56 flex items-center justify-center p-2">
+                        <img src="evento_06.jpeg" alt="Painel de LED" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Painéis de LED</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Painéis indoor e outdoor com brilho ajustável e montagem profissional inclusa (P2 e P3).</p>
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-xl p-1 border border-gray-700">
-                    <img src="acer_nitro_v15.jpg" alt="Locação de Notebook Gamer Acer Nitro V15 com i7 para eventos" class="w-full h-56 object-cover rounded-t-lg">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Notebook para Locação</h3>
-                        <p class="text-gray-400 text-sm mb-4">Acer Nitro V15 com i7 + 4050. Máquina formatada e pronta para rodar apresentações pesadas.</p>
+                <div class="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:-translate-y-2 hover-glow transition-all duration-300 flex flex-col">
+                    <div class="relative bg-gray-900 h-56 flex items-center justify-center p-2">
+                        <span class="absolute top-4 right-4 bg-green-500 text-gray-900 text-xs font-bold px-3 py-1 rounded-full z-10">Gamer</span>
+                        <img src="acer_nitro_v15.jpg" alt="Notebook Acer" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Notebook Gamer</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Acer Nitro V15 com i7 + RTX 4050. Máquina formatada, rápida e pronta para apresentações pesadas.</p>
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-xl p-1 border border-gray-700">
-                    <img src="som.png" alt="Aluguel de sistema de som vertical profissional" class="w-full h-56 object-cover rounded-t-lg">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Sistema de Som vertical</h3>
-                        <p class="text-gray-400 text-sm mb-4">Sistema de som profissional para o seu evento.</p>
+                <div class="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:-translate-y-2 hover-glow transition-all duration-300 flex flex-col">
+                    <div class="relative bg-gray-900 h-56 flex items-center justify-center p-2">
+                        <img src="latitude.jpg" alt="Notebook Latitude" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Notebooks DELL</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Notebooks para credenciamento, apresentações leves e ótimo com tarefas médias.</p>
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-xl p-1 border border-gray-700">
-                    <img src="Destaques_Climatizadores.webp" alt="Locação de climatizador evaporativo simples para tendas e salões" class="w-full h-56 object-contain rounded-t-lg bg-white">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Climatizadores simples</h3>
-                        <p class="text-gray-400 text-sm mb-4">Climatizadores silenciosos para manter o conforto térmico do seu público.</p>
+                <div class="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:-translate-y-2 hover-glow transition-all duration-300 flex flex-col">
+                    <div class="relative bg-gray-900 h-56 flex items-center justify-center p-2">
+                        <img src="som.png" alt="Sistema de Som" class="w-full h-full object-cover rounded-xl">
                     </div>
-                </div>
-                
-                <div class="bg-gray-800 rounded-xl p-1 border border-gray-700">
-                    <img src="climatizadores_duplosss.webp" alt="Aluguel de climatizador duplo de alta capacidade para grandes eventos" class="w-full h-56 object-contain rounded-t-lg bg-white">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Climatizadores duplos</h3>
-                        <p class="text-gray-400 text-sm mb-4">Climatizadores com maior capacidade de área de atuação para o resfriamento.</p>
-                    </div>
-                </div>
-                
-                <div class="bg-gray-800 rounded-xl p-1 border border-gray-700">
-                    <img src="pulpito_interativo_2.webp" alt="Locação de púlpito interativo digital com tela de LED" class="w-full h-56 object-contain rounded-t-lg bg-white">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Púlpito Interativo</h3>
-                        <p class="text-gray-400 text-sm mb-4">Púlpito com tela LED para dar maior visibilidade.</p>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Sistema de Som Vertical</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Sonorização profissional com altíssima fidelidade e potência para preencher o ambiente do seu evento.</p>
                     </div>
                 </div>
 
-                <div class="bg-gray-800 rounded-xl p-1 border border-gray-700">
-                    <img src="totem_de_led.png" alt="Locação de totens de LED" class="w-full h-56 object-contain rounded-t-lg bg-white">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Totens de LED</h3>
-                        <p class="text-gray-400 text-sm mb-4">Totens de LED P1.</p>
+                <div class="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:-translate-y-2 hover-glow transition-all duration-300 flex flex-col">
+                    <div class="relative bg-white h-56 flex items-center justify-center p-2">
+                        <img src="Destaques_Climatizadores.webp" alt="Climatizadores" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Climatizadores Simples</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Equipamentos silenciosos e eficientes para manter o conforto térmico ideal do seu público.</p>
                     </div>
                 </div>
                 
-                <div class="bg-gray-800 rounded-xl p-1 border border-gray-700">
-                    <img src="gerador_energia.png" alt="Aluguel de gerador de energia a diesel silencioso em Palmas" class="w-full h-56 object-contain rounded-t-lg bg-white">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Gerador de Energia</h3>
-                        <p class="text-gray-400 text-sm mb-4">Gerador de energia a diesel silencioso para seu evento 24/7.</p>
+                <div class="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:-translate-y-2 hover-glow transition-all duration-300 flex flex-col">
+                    <div class="relative bg-white h-56 flex items-center justify-center p-2">
+                        <img src="climatizadores_duplosss.webp" alt="Climatizadores Duplos" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Climatizadores Duplos</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Alta potência de resfriamento. Ideal para grandes áreas, galpões e tendas externas.</p>
                     </div>
                 </div>
                 
-                <div class="bg-gray-800 rounded-xl p-1 border border-gray-700">
-                    <img src="box_truss.png" alt="Montagem e locação de estruturas metálicas Box Truss" class="w-full h-56 object-contain rounded-t-lg bg-white">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Box Truss</h3>
-                        <p class="text-gray-400 text-sm mb-4">Peças de todos os tamanhos para lonas, banners e muito mais.</p>
+                <div class="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:-translate-y-2 hover-glow transition-all duration-300 flex flex-col">
+                    <div class="relative bg-white h-56 flex items-center justify-center p-2">
+                        <img src="pulpito_interativo_2.webp" alt="Púlpito Interativo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Púlpito Interativo</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Inovação e elegância. Púlpito com tela de LED frontal para logomarcas e interatividade.</p>
                     </div>
                 </div>
+
+                <div class="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:-translate-y-2 hover-glow transition-all duration-300 flex flex-col">
+                    <div class="relative bg-white h-56 flex items-center justify-center p-2">
+                        <img src="totem_de_led.png" alt="Totens de LED" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Totens de LED</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Totens de LED de alta definição (P1) para sinalização, banners digitais e publicidade dinâmica.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:-translate-y-2 hover-glow transition-all duration-300 flex flex-col">
+                    <div class="relative bg-white h-56 flex items-center justify-center p-2">
+                        <img src="gerador_energia.png" alt="Gerador de Energia" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Gerador de Energia</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Garantia contra imprevistos. Geradores a diesel silenciosos para manter seu evento rodando 24/7.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:-translate-y-2 hover-glow transition-all duration-300 flex flex-col">
+                    <div class="relative bg-white h-56 flex items-center justify-center p-2">
+                        <img src="box_truss.png" alt="Estruturas Box Truss" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-white mb-2">Estruturas Box Truss</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">Box Truss (Q15, Q30) para sustentação de painéis, iluminação, banners e pórticos de entrada.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
